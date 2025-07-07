@@ -149,6 +149,9 @@ header {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem;
 }
 
 .hamburger span {
@@ -157,6 +160,7 @@ header {
     background: var(--white);
     margin: 3px 0;
     transition: var(--transition);
+    display: block;
 }
 
 /* ===== HERO SECTION ===== */
@@ -234,6 +238,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
@@ -547,14 +552,58 @@ footer p {
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+    /* Navigation Styles */
     .nav-menu {
-        display: none;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: var(--primary-color);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: var(--transition);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+    
+    .nav-menu a {
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+    }
+    
+    .nav-menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
     
     .hamburger {
         display: flex;
     }
     
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Layout Styles */
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
@@ -631,55 +680,6 @@ footer p {
     }
 }
 
-/* ===== MOBILE NAVIGATION STYLES ===== */
-@media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: var(--primary-color);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: var(--transition);
-        z-index: 999;
-    }
-    
-    .nav-menu.active {
-        right: 0;
-    }
-    
-    .nav-menu li {
-        margin: 1rem 0;
-    }
-    
-    .nav-menu a {
-        font-size: 1.2rem;
-        padding: 1rem;
-        border-radius: var(--border-radius);
-        transition: var(--transition);
-    }
-    
-    .nav-menu a:hover {
-        background: rgba(255, 255, 255, 0.1);
-    }
-    
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-}
-
 /* ===== FORM FOCUS STATES ===== */
 .form-group.focused label {
     color: var(--primary-color);
@@ -692,14 +692,19 @@ footer p {
     border-color: var(--primary-color);
 }
 
-/* ===== WEBKIT BACKDROP FILTER SUPPORT ===== */
+/* ===== BACKDROP FILTER SUPPORT ===== */
 .hero-placeholder {
+    /* Webkit prefix for Safari support */
     -webkit-backdrop-filter: blur(10px);
+    /* Standard property for modern browsers */
     backdrop-filter: blur(10px);
 }
 
 .navbar {
+    /* Webkit prefix for Safari support */
     -webkit-backdrop-filter: blur(10px);
+    /* Standard property for modern browsers */
+    backdrop-filter: blur(10px);
 }
 
 /* ===== ANIMATIONS ===== */
