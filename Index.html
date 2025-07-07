@@ -3,61 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beautician Services</title>
+    <title>Elite Beauty Studio - Professional Beautician Services</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to Our Beautician Services</h1>
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><i class="fas fa-gem"></i> Elite Beauty Studio</h1>
+            </div>
+            <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a hrefcontact">Contact</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Transform Your Beauty</h1>
+                <p class="hero-subtitle">Professional beauty treatments tailored just for you</p>
+                <a href="#booking" class="cta-button">Book Your Appointment</a>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fas fa-spa"></i>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to our beautician services. We offer a range of beauty treatments to help you look and feel your best.</p>
-    </section>
+    <main>
+        <section id="home" class="about-section">
+            <div class="container">
+                <h2>About Our Studio</h2>
+                <p class="lead">Welcome to Elite Beauty Studio, where we believe every person deserves to look and feel their absolute best. Our team of experienced beauticians uses only the finest products and latest techniques to provide you with exceptional beauty treatments in a luxurious and relaxing environment.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h3>Expert Professionals</h3>
+                        <p>Certified beauticians with years of experience</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Natural Products</h3>
+                        <p>Eco-friendly and cruelty-free beauty products</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Personalized Care</h3>
+                        <p>Treatments tailored to your unique needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="services">
-        <h2>Services</h2>
-        <ul>
-            <li>Facials</li>
-            <li>Manicures</li>
-            <li>Pedicures</li>
-            <li>Hair Styling</li>
-        </ul>
-    </section>
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <p class="section-subtitle">Discover our range of premium beauty treatments</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Luxury Facials</h3>
+                        <p>Rejuvenating facials using premium skincare products to leave your skin glowing and refreshed.</p>
+                        <div class="service-price">From $80</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <h3>Professional Manicures</h3>
+                        <p>Complete nail care including shaping, cuticle treatment, and long-lasting polish application.</p>
+                        <div class="service-price">From $35</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shoe-prints"></i>
+                        </div>
+                        <h3>Relaxing Pedicures</h3>
+                        <p>Soothing foot treatments with exfoliation, massage, and beautiful nail polish finish.</p>
+                        <div class="service-price">From $45</div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3>Hair Styling</h3>
+                        <p>Professional hair cutting, styling, and treatment services for all hair types and occasions.</p>
+                        <div class="service-price">From $60</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="booking">
-        <h2>Booking</h2>
-        <form id="booking-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="service">Service:</label>
-            <select id="service" name="service">
-                <option value="facial">Facial</option>
-                <option value="man <option value="pedicure">Pedicure</option>
-                <option value="hair-styling">Hair Styling</option>
-            </select>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            <button type="submit">Book Now</button>
-        </form>
-    </section>
+        <section id="booking" class="booking-section">
+            <div class="container">
+                <h2>Book Your Appointment</h2>
+                <p class="section-subtitle">Schedule your beauty treatment today</p>
+                <div class="booking-container">
+                    <form id="booking-form" class="booking-form">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="service"><i class="fas fa-spa"></i> Service</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="facial">Luxury Facial - $80</option>
+                                <option value="manicure">Professional Manicure - $35</option>
+                                <option value="pedicure">Relaxing Pedicure - $45</option>
+                                <option value="hair-styling">Hair Styling - $60</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date"><i class="fas fa-calendar"></i> Preferred Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time"><i class="fas fa-clock"></i> Preferred Time</label>
+                                <select id="time" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes"><i class="fas fa-comment"></i> Special Requests</label>
+                            <textarea id="notes" name="notes" placeholder="Any special requests or allergies we should know about?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: info@beauticianservices.com</p>
-        <p>Phone: +123 456 7890</p>
-    </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Visit Us</h3>
+                                <p>123 Beauty Boulevard<br>Glamour District, City 12345</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+123 456 7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>info@elitebeautystudio.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Hours</h3>
+                                <p>Mon-Fri: 9AM-7PM<br>Sat: 9AM-6PM<br>Sun: 10AM-5PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#" title="Follow us on Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" title="Like us on Facebook" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" title="Follow us on Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Subscribe to our YouTube channel" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Elite Beauty Studio. All rights reserved. | Crafted with care for your beauty needs.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
