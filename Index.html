@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautician Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Beautician Services</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a hrefcontact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to our beautician services. We offer a range of beauty treatments to help you look and feel your best.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Facials</li>
+            <li>Manicures</li>
+            <li>Pedicures</li>
+            <li>Hair Styling</li>
+        </ul>
+    </section>
+
+    <section id="booking">
+        <h2>Booking</h2>
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="service">Service:</label>
+            <select id="service" name="service">
+                <option value="facial">Facial</option>
+                <option value="man <option value="pedicure">Pedicure</option>
+                <option value="hair-styling">Hair Styling</option>
+            </select>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: info@beauticianservices.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
